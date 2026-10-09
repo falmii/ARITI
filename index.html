@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARITI TRANSPORTATION PLC | Sand, Clay, Stone &amp; Truck Rental in Addis Ababa</title>
+<meta name="description" content="ARITI Transportation PLC: sand, red clay and crushed stone delivery, Sino dump truck daily rental and long-haul freight in Ethiopia. Get an instant estimate and request a quote.">
+<meta name="theme-color" content="#12161C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Noto+Sans+Ethiopic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  :root {
+    --asphalt: #12161C; --basalt: #1E2530; --amber: #F5A800; --amber-dark: #B87D00; --amber-soft: #FFF3D1;
+    --concrete: #E8EAED; --ink: #1f2937; --muted: #64748b; --line: #e2e8f0; --card: #fff;
+    --ok: #047857; --ok-bg: #d1fae5; --bad: #b91c1c; --bad-bg: #fee2e2; --sky: #075985; --sky-bg: #e0f2fe;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'Barlow', 'Noto Sans Ethiopic', system-ui, sans-serif; color: var(--ink); background: var(--concrete); -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  h1, h2, h3 { margin: 0; line-height: 1.15; }
+  .display { font-family: 'Barlow Condensed', 'Barlow', sans-serif; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  *:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+  .hidden { display: none !important; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 18px; }
+  .hazard { height: 10px; background: repeating-linear-gradient(-45deg, #F5A800 0 14px, #12161C 14px 28px); }
+  .hazard.thin { height: 6px; }
+  .plate { font-family: 'Barlow Condensed', sans-serif; letter-spacing: .06em; font-weight: 700; background: var(--amber); color: var(--asphalt); padding: 1px 9px; border-radius: 4px; display: inline-block; font-size: .95rem; white-space: nowrap; }
+  .plate.plain { background: none; padding: 0; color: inherit; }
+
+  /* Buttons & fields */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 16px; border-radius: 8px; border: 1px solid transparent; font: 600 .95rem 'Barlow', sans-serif; cursor: pointer; text-decoration: none; transition: filter .15s, background .15s; }
+  .btn:disabled { opacity: .55; cursor: not-allowed; }
+  .btn-amber { background: var(--amber); color: var(--asphalt); } .btn-amber:hover:not(:disabled) { filter: brightness(1.08); }
+  .btn-dark { background: var(--asphalt); color: #fff; } .btn-dark:hover:not(:disabled) { background: var(--basalt); }
+  .btn-line { background: #fff; border-color: #cbd5e1; color: #334155; } .btn-line:hover:not(:disabled) { background: #f8fafc; }
+  .btn-ghost { background: rgba(255,255,255,.1); color: #fff; } .btn-ghost:hover { background: rgba(255,255,255,.2); }
+  .btn-danger { background: var(--bad); color: #fff; }
+  .btn-lg { padding: 13px 22px; font-size: 1.05rem; }
+  .btn-sm { padding: 5px 10px; font-size: .84rem; }
+  .field { width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font: 400 .95rem 'Barlow', 'Noto Sans Ethiopic', sans-serif; background: #fff; color: var(--ink); }
+  .field:focus { outline: none; border-color: var(--amber-dark); box-shadow: 0 0 0 3px rgba(245,168,0,.28); }
+  textarea.field { resize: vertical; }
+  .lbl { display: block; font-weight: 600; font-size: .88rem; color: #334155; margin-bottom: 5px; }
+  .err { color: var(--bad); font-size: .86rem; margin-top: 4px; }
+  .help { color: var(--muted); font-size: .84rem; margin-top: 4px; }
+  .form-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .span-all { grid-column: 1 / -1; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+  /* ================= PUBLIC SITE ================= */
+  .top { background: var(--asphalt); color: #fff; position: sticky; top: 0; z-index: 40; }
+  .top .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 800 1.35rem 'Barlow Condensed', sans-serif; letter-spacing: .04em; }
+  .brand .mark { width: 38px; height: 38px; border-radius: 8px; background: var(--amber); color: var(--asphalt); display: grid; place-items: center; }
+  .nav-links { display: flex; align-items: center; gap: 22px; font-weight: 600; font-size: .95rem; }
+  .nav-links a { text-decoration: none; color: #cbd5e1; } .nav-links a:hover { color: var(--amber); }
+  .nav-toggle { display: none; }
+  .mobile-nav { background: var(--basalt); border-top: 1px solid rgba(255,255,255,.1); }
+  .mobile-nav a { display: block; padding: 13px 18px; color: #e2e8f0; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,.07); }
+
+  .hero { background: var(--asphalt); color: #fff; padding: 56px 0 64px; }
+  .hero .grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; }
+  .eyebrow { color: var(--amber); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .82rem; }
+  .hero h1 { font: 800 clamp(2.4rem, 6vw, 4.2rem)/1 'Barlow Condensed', sans-serif; margin: 10px 0 16px; }
+  .hero h1 span { color: var(--amber); }
+  .hero p.lead { color: #cbd5e1; font-size: 1.12rem; max-width: 52ch; margin: 0 0 24px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .stats { display: flex; gap: 30px; margin-top: 32px; }
+  .stats .n { font: 800 2.6rem/1 'Barlow Condensed', sans-serif; color: var(--amber); }
+  .stats .l { color: #94a3b8; font-size: .88rem; }
+  .board { background: var(--basalt); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; overflow: hidden; }
+  .board h2 { padding: 14px 18px; font: 700 1.25rem 'Barlow Condensed', sans-serif; letter-spacing: .05em; border-bottom: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; gap: 10px; }
+  .live { width: 9px; height: 9px; border-radius: 50%; background: #34d399; animation: blink 1.6s infinite; }
+  @keyframes blink { 50% { opacity: .3; } }
+  .board ul { list-style: none; margin: 0; padding: 0 18px; }
+  .board li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .board li:last-child { border-bottom: 0; }
+  .board .cap { color: #cbd5e1; font-size: .9rem; text-align: right; }
+  .board .none { color: #94a3b8; padding: 22px 0; font-size: .92rem; }
+
+  section.block { padding: 64px 0; scroll-margin-top: 64px; }
+  section.dark { background: var(--asphalt); color: #fff; }
+  .sec-head { margin-bottom: 30px; }
+  .sec-head h2 { font: 800 clamp(1.9rem, 4vw, 2.7rem)/1.05 'Barlow Condensed', sans-serif; }
+  .sec-head p { color: var(--muted); margin: 8px 0 0; max-width: 60ch; }
+  .dark .sec-head p { color: #94a3b8; }
+  .services { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); column-gap: 40px; }
+  .services li { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #cbd5e1; align-items: flex-start; }
+  .services .ic { width: 46px; height: 46px; flex: none; background: var(--asphalt); color: var(--amber); border-radius: 8px; display: grid; place-items: center; font-size: 1.1rem; }
+  .services h3 { font-size: 1.1rem; font-weight: 700; }
+  .link-btn { background: none; border: 0; padding: 0; color: var(--amber-dark); font: 600 .92rem 'Barlow', sans-serif; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+  .fleet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+  .truck { background: var(--basalt); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .truck .photo { height: 176px; background: #161c25; display: grid; place-items: center; color: #475569; font-size: 3.6rem; }
+  .truck .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .truck .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .truck .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .truck h3 { font-size: 1.1rem; }
+  .truck .sub { color: #94a3b8; font-size: .9rem; }
+  .tag-ready { color: #34d399; font-size: .82rem; font-weight: 700; } .tag-standby { color: #94a3b8; font-size: .82rem; font-weight: 700; }
+
+  .est { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: stretch; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px; box-shadow: 0 1px 2px rgba(15,23,42,.05); }
+  .est-result { background: var(--asphalt); color: #fff; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+  .est-result .k { color: var(--amber); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .8rem; }
+  .est-result .v { font: 800 clamp(1.8rem, 4vw, 2.6rem)/1.05 'Barlow Condensed', sans-serif; }
+  .est-result .d { color: #94a3b8; font-size: .92rem; }
+  .est-result .fine { color: #64748b; font-size: .8rem; margin-top: 10px; }
+
+  .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; }
+  .news-grid article { border-top: 4px solid var(--asphalt); padding-top: 14px; }
+  .news-grid time { color: var(--amber-dark); font-weight: 700; font-size: .88rem; }
+  .news-grid h3 { font: 700 1.55rem/1.1 'Barlow Condensed', sans-serif; margin: 4px 0 8px; }
+  .news-grid p { margin: 0; color: #475569; }
+
+  .quote-wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 36px; align-items: start; }
+  .quote-wrap .side p { color: #cbd5e1; }
+  .quote-wrap .side ul { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
+  .quote-wrap .side li { display: flex; gap: 12px; align-items: center; color: #e2e8f0; }
+  .quote-wrap .side li i { color: var(--amber); width: 20px; text-align: center; }
+  .quote-card { background: #fff; color: var(--ink); border-radius: 12px; padding: 26px; }
+
+  footer.site { background: var(--asphalt); color: #94a3b8; padding: 34px 0; font-size: .92rem; }
+  footer.site .cols { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 22px; }
+  footer.site a { color: #e2e8f0; text-decoration: none; } footer.site a:hover { color: var(--amber); }
+  footer.site .brand { color: #fff; }
+  .float-tg { position: fixed; right: 16px; bottom: 16px; z-index: 45; width: 54px; height: 54px; border-radius: 50%; background: #229ED9; color: #fff; display: grid; place-items: center; font-size: 1.5rem; box-shadow: 0 6px 18px rgba(0,0,0,.3); text-decoration: none; }
+
+  /* Dialog / toast */
+  dialog { border: 0; border-radius: 14px; padding: 0; width: min(440px, calc(100% - 32px)); box-shadow: 0 24px 60px rgba(0,0,0,.35); }
+  dialog::backdrop { background: rgba(10,13,18,.65); }
+  .dlg { padding: 26px; }
+  .dlg .ok { width: 54px; height: 54px; border-radius: 50%; background: var(--ok-bg); color: var(--ok); display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 12px; }
+  .dlg .ref { font: 800 1.7rem 'Barlow Condensed', sans-serif; letter-spacing: .06em; background: var(--amber-soft); border: 1px dashed var(--amber-dark); border-radius: 8px; padding: 6px 12px; display: inline-block; margin: 10px 0; }
+  #toasts { position: fixed; top: 14px; right: 14px; left: 14px; z-index: 200; display: flex; flex-direction: column; gap: 8px; align-items: flex-end; pointer-events: none; }
+  .toast { pointer-events: auto; color: #fff; font-weight: 600; font-size: .92rem; padding: 11px 16px; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.25); max-width: 420px; background: #1e293b; }
+  .toast.success { background: #047857; } .toast.error { background: #b91c1c; }
+  .demo-bar { background: var(--amber); color: var(--asphalt); text-align: center; font-weight: 600; font-size: .88rem; padding: 6px 12px; }
+
+  /* ================= ADMIN ================= */
+  .login-screen { position: fixed; inset: 0; z-index: 100; background: var(--asphalt); display: grid; place-items: center; padding: 16px; overflow: auto; }
+  .login-box { width: 100%; max-width: 400px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.5); }
+  .login-box form { padding: 28px; display: grid; gap: 14px; }
+  .login-box h1 { font: 800 2rem 'Barlow Condensed', sans-serif; color: var(--asphalt); }
+  .adm-head { background: var(--asphalt); color: #fff; }
+  .adm-head .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 62px; }
+  .adm-title { display: flex; align-items: center; gap: 10px; font: 800 1.3rem 'Barlow Condensed', sans-serif; letter-spacing: .04em; min-width: 0; }
+  .adm-title .mark { width: 36px; height: 36px; border-radius: 8px; background: var(--amber); color: var(--asphalt); display: grid; place-items: center; flex: none; }
+  .badge-mode { font: 700 .72rem 'Barlow', sans-serif; padding: 2px 8px; border-radius: 4px; background: #10b981; color: #fff; letter-spacing: 0; }
+  .badge-mode.demo { background: var(--amber); color: var(--asphalt); }
+  .adm-actions { display: flex; gap: 8px; align-items: center; font-size: .85rem; }
+  .tabs { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 30; }
+  .tabs .in { display: flex; overflow-x: auto; max-width: 1240px; margin: 0 auto; padding: 0 12px; }
+  .tab-btn { background: none; border: 0; border-bottom: 4px solid transparent; padding: 14px 15px; font: 600 .93rem 'Barlow', sans-serif; color: var(--muted); white-space: nowrap; cursor: pointer; }
+  .tab-btn:hover { color: var(--asphalt); }
+  .tab-btn.active { color: var(--asphalt); border-bottom-color: var(--amber); }
+  .count { font-size: .72rem; border-radius: 999px; padding: 1px 7px; margin-left: 4px; background: var(--asphalt); color: #fff; }
+  .count.amber { background: var(--amber); color: var(--asphalt); } .count:empty { display: none; }
+  .adm-main { max-width: 1240px; margin: 0 auto; padding: 22px 16px 60px; display: grid; gap: 22px; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 1px 2px rgba(15,23,42,.05); }
+  .panel.pad, .panel .pad { padding: 20px; }
+  .panel h2 { font: 700 1.5rem 'Barlow Condensed', sans-serif; color: var(--asphalt); }
+  .panel .ph { padding: 14px 18px; border-bottom: 1px solid #f1f5f9; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .panel .ph h2 { margin-right: auto; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; }
+  .kpi { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .kpi.hot { border: 2px solid var(--amber); }
+  .kpi i { color: var(--amber-dark); }
+  .kpi .v { font: 800 1.95rem/1.1 'Barlow Condensed', sans-serif; color: var(--asphalt); margin-top: 2px; }
+  .kpi .t { color: var(--muted); font-size: .86rem; }
+  .two { display: grid; grid-template-columns: 2fr 1fr; gap: 22px; }
+  .alerts { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; font-size: .92rem; }
+  .alerts li { display: flex; gap: 10px; align-items: flex-start; }
+  .alerts .d { width: 8px; height: 8px; border-radius: 50%; margin-top: 7px; flex: none; background: var(--amber); } .alerts .d.red { background: #ef4444; }
+  .tbl-wrap { overflow-x: auto; }
+  table.tbl { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  .tbl th { background: #f8fafc; text-align: left; padding: 10px 12px; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); white-space: nowrap; }
+  .tbl td { padding: 11px 12px; border-top: 1px solid #f1f5f9; vertical-align: middle; }
+  .tbl tbody tr:hover { background: #fafbfc; }
+  .tbl .r { text-align: right; } .tbl .nowrap { white-space: nowrap; }
+  .sub { color: var(--muted); font-size: .82rem; }
+  .pill { display: inline-block; padding: 2px 9px; border-radius: 5px; font-size: .78rem; font-weight: 700; white-space: nowrap; }
+  .p-green { background: var(--ok-bg); color: #065f46; } .p-grey { background: #e2e8f0; color: #334155; } .p-sky { background: var(--sky-bg); color: var(--sky); }
+  .p-red { background: var(--bad-bg); color: #991b1b; } .p-amber { background: var(--amber-soft); color: #8a5a00; }
+  .iconbtn { width: 32px; height: 32px; border-radius: 6px; border: 0; background: none; color: var(--muted); cursor: pointer; font-size: .95rem; }
+  .iconbtn:hover { background: #f1f5f9; color: var(--asphalt); } .iconbtn.del:hover { color: var(--bad); background: var(--bad-bg); }
+  .thumb { width: 56px; height: 40px; border-radius: 5px; object-fit: cover; background: #f1f5f9; display: grid; place-items: center; color: #94a3b8; }
+  .toolbar { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); align-items: end; background: #f8fafc; border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-top: 14px; }
+  .quick { display: flex; gap: 6px; flex-wrap: wrap; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 16px; }
+  .metric { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--amber); border-radius: 8px; padding: 10px 14px; }
+  .metric .t { color: var(--muted); font-size: .8rem; } .metric .v { font: 800 1.5rem 'Barlow Condensed', sans-serif; color: var(--asphalt); }
+  .metric.g { border-left-color: #10b981; } .metric.b { border-left-color: #3b82f6; } .metric.r { border-left-color: #ef4444; }
+  .news-item { padding: 16px 18px; display: flex; gap: 14px; justify-content: space-between; align-items: flex-start; border-top: 1px solid #f1f5f9; }
+  .news-item:first-child { border-top: 0; }
+  .empty { padding: 34px 16px; text-align: center; color: var(--muted); }
+  .printonly { display: none; }
+  select.mini { width: auto; padding: 4px 8px; font-size: .86rem; }
+
+  @media (max-width: 900px) {
+    .hero .grid, .est, .quote-wrap, .two { grid-template-columns: 1fr; }
+    .nav-links { display: none; } .nav-toggle { display: inline-flex; }
+    section.block { padding: 46px 0; }
+  }
+  @media print {
+    body { background: #fff; }
+    .noprint, .tab-pane:not(#tab-reports) { display: none !important; }
+    .printonly { display: block; margin-bottom: 12px; }
+    .panel { box-shadow: none; border-color: #999; }
+    .adm-main { padding: 0; }
+    .tbl th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+
+<body>
+<noscript><p style="padding:24px;font-family:sans-serif">This site needs JavaScript to load live prices, trucks and the quote form. Please enable it, or call us directly.</p></noscript>
+<div id="demoBar" class="demo-bar hidden noprint"><i class="fa-solid fa-flask"></i> Demo mode: data is saved only in this browser. Connect Supabase (see the CONFIG block in this file) to go live.</div>
+
+<!-- =====================================================================
+     PUBLIC WEBSITE
+     ===================================================================== -->
+<div id="publicView">
+  <header class="top">
+    <div class="container bar">
+      <a href="#top" class="brand"><span class="mark"><i class="fa-solid fa-truck-moving"></i></span> ARITI TRANSPORTATION</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#services">Services</a><a href="#fleet">Fleet</a><a href="#estimate">Estimate</a><a href="#news">News</a>
+        <a href="#quote" class="btn btn-amber btn-sm">Request a quote</a>
+      </nav>
+      <button type="button" id="navToggle" class="btn btn-ghost nav-toggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <nav id="mobileNav" class="mobile-nav hidden" aria-label="Mobile">
+      <a href="#services">Services</a><a href="#fleet">Fleet</a><a href="#estimate">Estimate</a><a href="#news">News</a><a href="#quote">Request a quote</a>
+    </nav>
+    <div class="hazard thin"></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container grid">
+        <div>
+          <span class="eyebrow">Addis Ababa &middot; Ethiopia</span>
+          <h1>Sand, clay and stone <span>delivered on time.</span></h1>
+          <p class="lead">Sino dump trucks for daily rental and bulk material hauling, plus long-distance freight across Ethiopia. Get a price estimate in seconds, then request a firm quote.</p>
+          <div class="cta-row">
+            <a href="#quote" class="btn btn-amber btn-lg"><i class="fa-solid fa-file-invoice-dollar"></i> Request a quote</a>
+            <a id="heroTelegram" href="#" target="_blank" rel="noopener" class="btn btn-ghost btn-lg"><i class="fa-brands fa-telegram"></i> Chat on Telegram</a>
+          </div>
+          <div class="stats">
+            <div><div class="n" id="statReady">0</div><div class="l">trucks ready today</div></div>
+            <div><div class="n" id="statFleet">0</div><div class="l">trucks in our fleet</div></div>
+          </div>
+        </div>
+        <aside class="board" aria-label="Trucks ready today">
+          <h2><span class="live" aria-hidden="true"></span> READY FOR DISPATCH</h2>
+          <ul id="heroBoard"></ul>
+        </aside>
+      </div>
+    </section>
+    <div class="hazard"></div>
+
+    <section id="services" class="block">
+      <div class="container">
+        <div class="sec-head"><h2>What we haul</h2><p>Tell us the material and the volume. We send the right truck.</p></div>
+        <ul id="serviceList" class="services"></ul>
+      </div>
+    </section>
+
+    <section id="fleet" class="block dark">
+      <div class="container">
+        <div class="sec-head"><h2>Our fleet</h2><p>Maintained trucks with experienced drivers. Live availability from our dispatch board.</p></div>
+        <div id="fleetContainer" class="fleet-grid"></div>
+      </div>
+    </section>
+
+    <section id="estimate" class="block">
+      <div class="container">
+        <div class="sec-head"><h2>Instant price estimate</h2><p>A guide price based on material, number of trips and distance. Your final quote is confirmed by our team.</p></div>
+        <div class="est">
+          <div class="card form-grid" style="align-content:start">
+            <div class="span-all"><label class="lbl" for="estMaterial">Material or service</label><select id="estMaterial" class="field"></select></div>
+            <div><label class="lbl" for="estTrips">Number of trips</label><input id="estTrips" class="field" type="number" min="1" max="500" value="1" inputmode="numeric"></div>
+            <div><label class="lbl" for="estDistance">One-way distance (km)</label><input id="estDistance" class="field" type="number" min="1" max="3000" value="20" inputmode="decimal"></div>
+          </div>
+          <div class="est-result" aria-live="polite">
+            <span class="k">Estimated total</span>
+            <span class="v" id="estTotal">-</span>
+            <span class="d" id="estDetail"></span>
+            <a href="#quote" class="btn btn-amber" style="margin-top:12px;align-self:flex-start">Get a firm quote</a>
+            <span class="fine">Estimate only. Excludes loading delays, tolls and special access.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="block" style="background:#fff">
+      <div class="container">
+        <div class="sec-head"><h2>Bulletins</h2><p>Updates from our dispatch office.</p></div>
+        <div id="newsContainer" class="news-grid"></div>
+      </div>
+    </section>
+
+    <section id="quote" class="block dark">
+      <div class="container quote-wrap">
+        <div class="side">
+          <div class="sec-head"><h2>Request a quote</h2></div>
+          <p>Fill in the form and our team will call you back. Prefer chat? Message us directly on Telegram.</p>
+          <ul>
+            <li><i class="fa-solid fa-phone"></i><a id="ftPhone" href="#">-</a></li>
+            <li><i class="fa-brands fa-telegram"></i><a id="ftTelegram" href="#" target="_blank" rel="noopener">Telegram</a></li>
+            <li><i class="fa-solid fa-location-dot"></i><span id="ftCity">-</span></li>
+          </ul>
+        </div>
+        <form id="quoteForm" class="quote-card form-grid" novalidate>
+          <div><label class="lbl" for="quoteName">Your name</label><input id="quoteName" class="field" maxlength="80" autocomplete="name" required></div>
+          <div>
+            <label class="lbl" for="quotePhone">Phone number</label>
+            <input id="quotePhone" class="field" type="tel" maxlength="20" autocomplete="tel" inputmode="tel" placeholder="09XXXXXXXX" required>
+            <p id="phoneErr" class="err hidden" role="alert">Enter a valid Ethiopian mobile number, e.g. 0911223344.</p>
+          </div>
+          <div><label class="lbl" for="quoteService">Material or service</label><select id="quoteService" class="field"></select></div>
+          <div><label class="lbl" for="quoteTonnage">Volume</label><select id="quoteTonnage" class="field"></select></div>
+          <div class="span-all"><label class="lbl" for="quoteLocation">Delivery location</label><input id="quoteLocation" class="field" maxlength="120" placeholder="e.g. Bole Bulbula, Addis Ababa" required></div>
+          <div class="span-all"><label class="lbl" for="quoteDetails">Extra details (optional)</label><textarea id="quoteDetails" class="field" rows="3" maxlength="500"></textarea></div>
+          <div class="hp" aria-hidden="true"><label>Leave this empty <input id="quoteWebsite" tabindex="-1" autocomplete="off"></label></div>
+          <div class="span-all"><button type="submit" class="btn btn-amber btn-lg" style="width:100%">Send quote request</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="container cols">
+      <div><a href="#top" class="brand"><span class="mark"><i class="fa-solid fa-truck-moving"></i></span> ARITI TRANSPORTATION PLC</a><br><span id="ftYear"></span> All rights reserved.</div>
+      <div><a href="#/admin"><i class="fa-solid fa-lock"></i> Manager login</a></div>
+    </div>
+  </footer>
+  <a id="floatTelegram" class="float-tg" href="#" target="_blank" rel="noopener" aria-label="Chat on Telegram"><i class="fa-brands fa-telegram"></i></a>
+</div>
+
+<!-- =====================================================================
+     MANAGER PORTAL
+     ===================================================================== -->
+<div id="adminView" class="hidden">
+  <div id="loginScreen" class="login-screen hidden">
+    <div class="login-box">
+      <div class="hazard"></div>
+      <form id="loginForm" novalidate>
+        <div>
+          <h1>Dispatch Control</h1>
+          <p class="help" id="loginHint">Manager sign in.</p>
+        </div>
+        <div><label class="lbl" for="managerEmail">Manager email</label><input id="managerEmail" class="field" type="email" autocomplete="username" required></div>
+        <div><label class="lbl" for="managerPass">Password</label><input id="managerPass" class="field" type="password" autocomplete="current-password" required><p id="loginError" class="err hidden" role="alert"></p></div>
+        <button type="submit" id="loginBtn" class="btn btn-amber btn-lg">Sign in</button>
+        <a href="#top" class="help" style="text-align:center">Back to public website</a>
+      </form>
+    </div>
+  </div>
+
+  <div id="adminPanel" class="hidden">
+    <header class="adm-head noprint">
+      <div class="container bar" style="max-width:1240px">
+        <div class="adm-title"><span class="mark"><i class="fa-solid fa-truck-ramp-box"></i></span><span>ARITI Dispatch Control</span><span id="modeBadge" class="badge-mode">Online</span></div>
+        <div class="adm-actions">
+          <span id="userBadge" style="color:#cbd5e1" class="hidden"></span>
+          <a class="btn btn-ghost btn-sm" href="#top" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> <span>Public site</span></a>
+          <button type="button" id="logoutBtn" class="btn btn-ghost btn-sm"><i class="fa-solid fa-right-from-bracket"></i> <span>Log out</span></button>
+        </div>
+      </div>
+      <div class="hazard thin"></div>
+    </header>
+
+    <nav class="tabs noprint" aria-label="Sections">
+      <div class="in" role="tablist">
+        <button type="button" class="tab-btn" role="tab" data-tab="overview"><i class="fa-solid fa-gauge-high"></i> Overview</button>
+        <button type="button" class="tab-btn" role="tab" data-tab="reports"><i class="fa-solid fa-chart-column"></i> Reports</button>
+        <button type="button" class="tab-btn" role="tab" data-tab="trips"><i class="fa-solid fa-route"></i> Trips <span id="badgeTrips" class="count"></span></button>
+        <button type="button" class="tab-btn" role="tab" data-tab="quotes"><i class="fa-solid fa-envelope-open-text"></i> Quotes <span id="badgeQuotes" class="count amber"></span></button>
+        <button type="button" class="tab-btn" role="tab" data-tab="fleet"><i class="fa-solid fa-truck"></i> Fleet</button>
+        <button type="button" class="tab-btn" role="tab" data-tab="drivers"><i class="fa-solid fa-id-card"></i> Drivers</button>
+        <button type="button" class="tab-btn" role="tab" data-tab="news"><i class="fa-solid fa-newspaper"></i> Bulletins</button>
+        <button type="button" class="tab-btn" role="tab" data-tab="settings"><i class="fa-solid fa-gear"></i> Settings</button>
+      </div>
+    </nav>
+
+    <main class="adm-main">
+      <!-- OVERVIEW -->
+      <section id="tab-overview" class="tab-pane">
+        <div id="kpis" class="kpis"></div>
+        <div class="two" style="margin-top:22px">
+          <div class="panel pad"><h2>Trips in the last 7 days</h2><div id="chart" style="margin-top:10px"></div></div>
+          <div class="panel pad"><h2>Needs attention</h2><ul id="alerts" class="alerts"></ul></div>
+        </div>
+      </section>
+
+      <!-- REPORTS -->
+      <section id="tab-reports" class="tab-pane hidden">
+        <div class="printonly"><h2>ARITI TRANSPORTATION PLC - Trip &amp; revenue report</h2><p id="repPrintLabel"></p></div>
+        <div class="panel pad">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+            <div><h2>Dispatch &amp; financial report</h2><p class="help" style="margin:2px 0 0">Choose a period and truck. Cancelled trips are listed but not counted in totals.</p></div>
+            <div class="noprint" style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" id="repCsvBtn" class="btn btn-amber"><i class="fa-solid fa-file-arrow-down"></i> Export CSV</button>
+              <button type="button" id="repPrintBtn" class="btn btn-line"><i class="fa-solid fa-print"></i> Print</button>
+            </div>
+          </div>
+          <div class="toolbar noprint">
+            <div><label class="lbl" for="repStart">From</label><input type="date" id="repStart" class="field"></div>
+            <div><label class="lbl" for="repEnd">To</label><input type="date" id="repEnd" class="field"></div>
+            <div><label class="lbl" for="repTruckFilter">Truck</label><select id="repTruckFilter" class="field"></select></div>
+            <div class="quick">
+              <button type="button" class="btn btn-line btn-sm rep-quick" data-range="today">Today</button>
+              <button type="button" class="btn btn-line btn-sm rep-quick" data-range="week">This week</button>
+              <button type="button" class="btn btn-line btn-sm rep-quick" data-range="month">This month</button>
+              <button type="button" class="btn btn-line btn-sm rep-quick" data-range="lastmonth">Last month</button>
+            </div>
+          </div>
+          <div id="repMetrics" class="metrics"></div>
+        </div>
+        <div class="panel" style="margin-top:22px">
+          <div class="ph"><h2>Truck performance</h2><span id="repPeriodLabel" class="sub"></span></div>
+          <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Truck</th><th>Trips</th><th>Loads</th><th>Distance</th><th class="r">Revenue</th></tr></thead><tbody id="repTruckRows"></tbody></table></div>
+        </div>
+        <div class="panel" style="margin-top:22px">
+          <div class="ph"><h2>Trips in range</h2></div>
+          <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Date</th><th>Truck &amp; driver</th><th>Route</th><th>Material</th><th>Loads</th><th class="r">Price</th><th>Status</th><th>Payment</th></tr></thead><tbody id="repTripsRows"></tbody></table></div>
+        </div>
+      </section>
+
+      <!-- TRIPS -->
+      <section id="tab-trips" class="tab-pane hidden">
+        <div class="panel pad">
+          <h2 id="tripFormTitle" style="margin-bottom:14px">Dispatch a trip</h2>
+          <form id="tripForm" class="form-grid" novalidate>
+            <input type="hidden" name="id"><input type="hidden" name="quote_ref">
+            <div><label class="lbl" for="t_date">Date</label><input id="t_date" name="trip_date" type="date" required class="field"></div>
+            <div><label class="lbl" for="t_plate">Truck</label><select id="t_plate" name="plate" required class="field"></select></div>
+            <div><label class="lbl" for="t_driver">Driver</label><select id="t_driver" name="driver" required class="field"></select></div>
+            <div><label class="lbl" for="t_material">Material</label><select id="t_material" name="material" class="field"></select></div>
+            <div><label class="lbl" for="t_origin">Origin</label><input id="t_origin" name="origin" required maxlength="80" class="field" placeholder="e.g. Mojo quarry"></div>
+            <div><label class="lbl" for="t_dest">Destination</label><input id="t_dest" name="destination" required maxlength="80" class="field" placeholder="e.g. Bole Bulbula"></div>
+            <div><label class="lbl" for="t_loads">Loads</label><input id="t_loads" name="loads" type="number" min="1" value="1" required class="field"></div>
+            <div><label class="lbl" for="t_km">Distance (km)</label><input id="t_km" name="distance_km" type="number" min="0" step="0.1" value="0" class="field"></div>
+            <div><label class="lbl" for="t_price">Price (ETB)</label><div style="display:flex;gap:8px"><input id="t_price" name="price" type="number" min="0" value="0" class="field"><button type="button" id="suggestPrice" class="btn btn-line">Suggest</button></div></div>
+            <div class="span-all"><label class="lbl" for="t_notes">Notes</label><input id="t_notes" name="notes" maxlength="200" class="field" placeholder="Gate pass, contact on site..."></div>
+            <div class="span-all" style="display:flex;justify-content:flex-end;gap:8px">
+              <button type="button" id="tripCancel" class="btn btn-line hidden">Cancel edit</button>
+              <button type="submit" id="tripSubmit" class="btn btn-amber">Save trip</button>
+            </div>
+          </form>
+        </div>
+        <div class="panel" style="margin-top:22px">
+          <div class="ph">
+            <h2>Trip records</h2>
+            <input id="tripSearch" type="search" placeholder="Search plate, driver, place..." class="field" style="width:230px" aria-label="Search trips">
+            <select id="tripStatusFilter" class="field" style="width:160px" aria-label="Filter by status"></select>
+            <button type="button" id="tripsCsv" class="btn btn-line btn-sm"><i class="fa-solid fa-file-arrow-down"></i> CSV</button>
+          </div>
+          <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Date</th><th>Truck / driver</th><th>Route</th><th>Material</th><th class="r">Price</th><th>Status</th><th>Payment</th><th class="r">Actions</th></tr></thead><tbody id="tripsBody"></tbody></table></div>
+        </div>
+      </section>
+
+      <!-- QUOTES -->
+      <section id="tab-quotes" class="tab-pane hidden">
+        <div class="panel">
+          <div class="ph">
+            <h2>Customer quote requests</h2>
+            <select id="quoteStatusFilter" class="field" style="width:170px" aria-label="Filter by status"></select>
+            <button type="button" id="quotesCsv" class="btn btn-line btn-sm"><i class="fa-solid fa-file-arrow-down"></i> CSV</button>
+          </div>
+          <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Reference</th><th>Client</th><th>Request</th><th>Location</th><th>Status</th><th class="r">Actions</th></tr></thead><tbody id="quotesBody"></tbody></table></div>
+        </div>
+      </section>
+
+      <!-- FLEET -->
+      <section id="tab-fleet" class="tab-pane hidden">
+        <div class="panel pad">
+          <h2 id="fleetFormTitle" style="margin-bottom:14px">Register a truck</h2>
+          <form id="fleetForm" class="form-grid" novalidate>
+            <input type="hidden" name="id">
+            <div><label class="lbl" for="f_plate">Plate number</label><input id="f_plate" name="plate" required maxlength="20" class="field" placeholder="3-A12345 ET"></div>
+            <div><label class="lbl" for="f_model">Model</label><input id="f_model" name="model" required maxlength="80" class="field" placeholder="Sino Howo 371 HP (dump)"></div>
+            <div><label class="lbl" for="f_cap">Capacity</label><input id="f_cap" name="capacity" required maxlength="40" class="field" placeholder="18 m³ / 30 tons"></div>
+            <div><label class="lbl" for="f_status">Status</label><select id="f_status" name="status" class="field"></select></div>
+            <div><label class="lbl" for="f_driver">Assigned driver</label><select id="f_driver" name="driver_id" class="field"></select></div>
+            <div><label class="lbl" for="f_service">Next service due</label><input id="f_service" name="service_due" type="date" class="field"></div>
+            <div class="span-all">
+              <label class="lbl" for="f_image">Truck photo</label>
+              <input id="f_image" name="image" type="file" accept="image/jpeg,image/png,image/webp" class="field">
+              <p id="fleetImgHelp" class="help">JPG, PNG or WebP. Photos are resized automatically to save storage.</p>
+            </div>
+            <div class="span-all" style="display:flex;justify-content:flex-end;gap:8px">
+              <button type="button" id="fleetCancel" class="btn btn-line hidden">Cancel edit</button>
+              <button type="submit" id="fleetSubmit" class="btn btn-amber">Save truck</button>
+            </div>
+          </form>
+        </div>
+        <div class="panel" style="margin-top:22px">
+          <div class="ph"><h2>Registered fleet</h2></div>
+          <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Photo</th><th>Plate</th><th>Model &amp; capacity</th><th>Driver</th><th>Service due</th><th>Status</th><th class="r">Actions</th></tr></thead><tbody id="fleetBody"></tbody></table></div>
+        </div>
+      </section>
+
+      <!-- DRIVERS -->
+      <section id="tab-drivers" class="tab-pane hidden">
+        <div class="panel pad">
+          <h2 id="driverFormTitle" style="margin-bottom:14px">Add a driver</h2>
+          <form id="driverForm" class="form-grid" novalidate>
+            <input type="hidden" name="id">
+            <div><label class="lbl" for="d_name">Full name</label><input id="d_name" name="name" required maxlength="60" class="field"></div>
+            <div><label class="lbl" for="d_phone">Phone</label><input id="d_phone" name="phone" required maxlength="20" class="field" inputmode="tel"></div>
+            <div><label class="lbl" for="d_license">License number</label><input id="d_license" name="license" maxlength="30" class="field"></div>
+            <div style="display:flex;align-items:flex-end;gap:8px">
+              <button type="submit" id="driverSubmit" class="btn btn-amber">Save driver</button>
+              <button type="button" id="driverCancel" class="btn btn-line hidden">Cancel</button>
+            </div>
+          </form>
+        </div>
+        <div class="panel" style="margin-top:22px">
+          <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Name</th><th>Phone</th><th>License</th><th class="r">Actions</th></tr></thead><tbody id="driversBody"></tbody></table></div>
+        </div>
+      </section>
+
+      <!-- NEWS -->
+      <section id="tab-news" class="tab-pane hidden">
+        <div class="panel pad">
+          <h2 style="margin-bottom:14px">Write a bulletin</h2>
+          <form id="newsForm" style="display:grid;gap:14px" novalidate>
+            <div><label class="lbl" for="n_title">Headline</label><input id="n_title" name="title" required maxlength="100" class="field"></div>
+            <div><label class="lbl" for="n_content">Announcement</label><textarea id="n_content" name="content" rows="3" required maxlength="600" class="field"></textarea></div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+              <label style="display:inline-flex;gap:8px;align-items:center;font-size:.92rem"><input type="checkbox" name="published" checked style="width:18px;height:18px;accent-color:#F5A800"> Show on public website immediately</label>
+              <button type="submit" class="btn btn-amber">Publish bulletin</button>
+            </div>
+          </form>
+        </div>
+        <div class="panel" style="margin-top:22px"><div id="newsList"></div></div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="tab-settings" class="tab-pane hidden">
+        <form id="settingsForm" class="panel pad" style="max-width:760px;display:grid;gap:16px" novalidate>
+          <h2>Contact &amp; rate card</h2>
+          <div class="form-grid">
+            <div><label class="lbl" for="s_phone">Phone</label><input id="s_phone" name="phone" class="field" maxlength="30"></div>
+            <div><label class="lbl" for="s_tg">Telegram username</label><input id="s_tg" name="telegram" class="field" maxlength="60" placeholder="AritiTransportation"></div>
+            <div class="span-all"><label class="lbl" for="s_city">Address</label><input id="s_city" name="city" class="field" maxlength="100"></div>
+            <div><label class="lbl" for="s_base">Base price per trip (ETB)</label><input id="s_base" name="base_trip" type="number" min="0" class="field"></div>
+            <div><label class="lbl" for="s_km">Price per km (ETB)</label><input id="s_km" name="per_km" type="number" min="0" class="field"></div>
+          </div>
+          <div><p class="lbl">Material multipliers</p><div id="multGrid" class="form-grid"></div><p class="help">1.00 = base price. 1.15 = 15% more.</p></div>
+          <div style="text-align:right"><button type="submit" class="btn btn-amber">Save settings</button></div>
+        </form>
+        <div class="panel pad" style="max-width:760px;margin-top:22px;display:grid;gap:14px">
+          <h2>Data &amp; account</h2>
+          <div><button type="button" id="backupBtn" class="btn btn-line"><i class="fa-solid fa-download"></i> Download full backup (JSON)</button><p class="help">Keep a copy now and then. It contains every table.</p></div>
+          <form id="pwForm" class="hidden" style="display:grid;gap:10px;max-width:340px" novalidate>
+            <div><label class="lbl" for="newPass">New password (at least 10 characters)</label><input id="newPass" type="password" class="field" autocomplete="new-password" minlength="10"></div>
+            <div><button type="submit" class="btn btn-dark">Change password</button></div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<dialog id="quoteDone" aria-labelledby="doneTitle">
+  <div class="dlg">
+    <div class="ok"><i class="fa-solid fa-check"></i></div>
+    <h2 id="doneTitle" class="display" style="font-size:1.8rem">Request received</h2>
+    <p style="margin:6px 0 0;color:#475569">Thank you. Our team will call you shortly. Keep this reference:</p>
+    <div class="ref" id="doneRef"></div>
+    <div style="text-align:right"><button type="button" id="doneClose" class="btn btn-dark">Close</button></div>
+  </div>
+</dialog>
+<div id="toasts" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* =====================================================================
+   1. CONFIG  -  paste your two Supabase values here (Project Settings > API)
+      Leave as-is to run in DEMO mode (data stays in your browser).
+      The anon key is meant to be public. Security comes from the database
+      rules in setup.sql, NOT from hiding this key.
+   ===================================================================== */
+const CONFIG = {
+  supabaseUrl:     'https://YOUR_PROJECT_ID.supabase.co',
+  supabaseAnonKey: 'YOUR_ANON_PUBLIC_KEY',
+  storageBucket:   'truck-photos',
+};
+
+(() => {
+'use strict';
+
+/* =====================================================================
+   2. CONSTANTS & HELPERS
+   ===================================================================== */
+const MATERIALS = [
+  { key: 'sand',   label: 'Fine sand (የአሸዋ ጭነት)',                    icon: 'fa-mountain' },
+  { key: 'clay',   label: 'Red clay / selection earth (የቀይ አፈር)',       icon: 'fa-layer-group' },
+  { key: 'stone',  label: 'Crushed stone / aggregates (ስምጥ ጠጠር)',     icon: 'fa-cubes' },
+  { key: 'rental', label: 'Sino truck daily rental (ኪራይ)',             icon: 'fa-truck-pickup' },
+  { key: 'haul',   label: 'Inter-city long haul freight',               icon: 'fa-route' },
+];
+const VOLUMES        = ['1 trip (about 16-18 m³)', '2 - 5 trips', 'Bulk project (10+ trips)', 'Long-term monthly rental'];
+const TRIP_STATUSES  = ['Scheduled', 'In Transit', 'Delivered', 'Cancelled'];
+const QUOTE_STATUSES = ['New', 'Contacted', 'Quoted', 'Confirmed', 'Completed', 'Lost'];
+const TRUCK_STATUSES = ['Active', 'Standby', 'Maintenance'];
+const DEFAULT_SETTINGS = { phone: '+251 911 000 000', telegram: 'AritiTransportation', city: 'Addis Ababa, Ethiopia', base_trip: 4000, per_km: 120,
+  multipliers: { sand: 1, clay: 0.9, stone: 1.15, rental: 1.6, haul: 1.3 } };
+const DEMO_PASSWORD = 'ariti2026';
+
+const $  = (id) => document.getElementById(id);
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const pad2 = (n) => String(n).padStart(2, '0');
+const iso = (d) => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+const today = () => iso(new Date());
+const addDays = (n) => { const d = new Date(); d.setDate(d.getDate() + n); return iso(d); };
+const parseDay = (s) => new Date(String(s).slice(0, 10) + 'T00:00:00');
+const daysUntil = (s) => Math.round((parseDay(s) - parseDay(today())) / 86400000);
+const fmtDate = (s) => (s ? parseDay(s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : '-');
+const etb = (n) => new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(Number(n) || 0) + ' ETB';
+const phoneOk = (p) => /^(\+?251|0)?[79]\d{8}$/.test(String(p).replace(/[\s-]/g, ''));
+const makeRef = () => 'ARI-' + today().replace(/-/g, '').slice(2) + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
+const materialLabel = (key) => (MATERIALS.find((m) => m.key === key) || {}).label || key || '-';
+const materialByLabel = (label) => (MATERIALS.find((m) => m.label === label) || {}).key || '';
+const safeImg = (u) => (/^(https:\/\/|data:image\/(jpeg|png|webp);base64,)/.test(String(u || '')) ? u : '');
+const tgHandle = (t) => String(t || '').replace(/^.*t\.me\//, '').replace(/^@/, '').trim();
+const options = (list, sel) => list.map((v) => `<option${v === sel ? ' selected' : ''}>${esc(v)}</option>`).join('');
+
+function estimate(settings, material, trips, km) {
+  const mult = (settings.multipliers || {})[material] ?? 1;
+  const perTrip = (Number(settings.base_trip) + km * Number(settings.per_km)) * mult;
+  const total = perTrip * trips;
+  return { perTrip, total, low: total * 0.9, high: total * 1.1 };
+}
+
+function toast(msg, type = 'info') {
+  const el = document.createElement('div');
+  el.className = 'toast ' + type;
+  el.textContent = msg;
+  $('toasts').appendChild(el);
+  setTimeout(() => el.remove(), 4500);
+}
+
+function confirmBox(message, okText = 'Delete') {
+  return new Promise((resolve) => {
+    const dlg = document.createElement('dialog');
+    dlg.innerHTML = `<div class="dlg"><p style="margin:0;font-weight:600">${esc(message)}</p>
+      <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:22px">
+      <button type="button" class="btn btn-line" data-v="0">Cancel</button>
+      <button type="button" class="btn btn-danger" data-v="1">${esc(okText)}</button></div></div>`;
+    dlg.addEventListener('click', (e) => { const b = e.target.closest('[data-v]'); if (b) dlg.close(b.dataset.v); });
+    dlg.addEventListener('close', () => { resolve(dlg.returnValue === '1'); dlg.remove(); });
+    document.body.appendChild(dlg);
+    dlg.showModal();
+  });
+}
+
+function toCSV(rows, cols) {
+  const cell = (v) => { let s = String(v ?? ''); if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; return '"' + s.replace(/"/g, '""') + '"'; };
+  return '﻿' + [cols.map((c) => cell(c.label)).join(','), ...rows.map((r) => cols.map((c) => cell(c.get ? c.get(r) : r[c.key])).join(','))].join('\r\n');
+}
+function download(name, content, mime = 'text/csv;charset=utf-8') {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([content], { type: mime }));
+  a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1500);
+}
+
+/** Resize a photo in the browser so the free 1 GB storage lasts. Returns a JPEG Blob. */
+async function compressImage(file, maxSide, quality) {
+  if (!/^image\/(jpeg|png|webp)$/.test(file.type)) throw new Error('Choose a JPG, PNG or WebP photo.');
+  if (file.size > 15 * 1024 * 1024) throw new Error('That photo is too large (15 MB maximum).');
+  const bmp = await createImageBitmap(file);
+  const scale = Math.min(1, maxSide / Math.max(bmp.width, bmp.height));
+  const c = document.createElement('canvas');
+  c.width = Math.max(1, Math.round(bmp.width * scale));
+  c.height = Math.max(1, Math.round(bmp.height * scale));
+  c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+  return new Promise((res, rej) => c.toBlob((b) => (b ? res(b) : rej(new Error('Could not process that photo.'))), 'image/jpeg', quality));
+}
+const blobToDataURL = (blob) => new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result); r.onerror = rej; r.readAsDataURL(blob); });
+
+/* =====================================================================
+   3. DATA LAYER  (Supabase cloud  OR  browser demo storage, same API)
+   ===================================================================== */
+const urlOk = /^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test(CONFIG.supabaseUrl) && !/YOUR_PROJECT/i.test(CONFIG.supabaseUrl);
+const keyOk = CONFIG.supabaseAnonKey.length > 40 && !/YOUR_ANON/i.test(CONFIG.supabaseAnonKey);
+const isCloud = Boolean(urlOk && keyOk && window.supabase);
+const client = isCloud ? window.supabase.createClient(CONFIG.supabaseUrl, CONFIG.supabaseAnonKey) : null;
+if (urlOk && keyOk && !window.supabase) console.error('Supabase library failed to load; running in demo mode.');
+
+function friendly(err) {
+  const m = String(err && err.message || err || 'Unknown error');
+  const code = err && err.code;
+  if (code === '23505') return new Error('That value already exists (duplicate).');
+  if (code === '23503') return new Error('It is still used by other records.');
+  if (code === '42501' || /row-level security|permission denied/i.test(m)) return new Error('Not allowed. Sign in again with a manager account.');
+  if (/Failed to fetch|NetworkError|network/i.test(m)) return new Error('No internet connection to the database.');
+  return new Error(m);
+}
+const unwrap = ({ data, error }) => { if (error) throw friendly(error); return data; };
+
+/* ---- Demo storage ---- */
+const LS_KEY = 'ARITI_DEMO_V2';
+let memStore = null;
+const L = {
+  load() {
+    if (memStore) return memStore;
+    try { const raw = localStorage.getItem(LS_KEY); if (raw) { memStore = JSON.parse(raw); return memStore; } } catch (_) { /* private mode */ }
+    memStore = L.seed(); L.save(); return memStore;
+  },
+  save() { try { localStorage.setItem(LS_KEY, JSON.stringify(memStore)); } catch (_) { /* quota or private mode */ } },
+  seed() {
+    const t = today();
+    return {
+      seq: 100,
+      settings: { ...DEFAULT_SETTINGS },
+      drivers: [{ id: 1, name: 'Abebe Kebede', phone: '0911223344', license: 'AA-10234' }, { id: 2, name: 'Tesfaye Alemu', phone: '0922334455', license: 'AA-20987' }],
+      fleet: [
+        { id: 1, plate: '3-A12345 ET', model: 'Sino Howo 371 HP (dump)', capacity: '18 m³ / 30 tons', status: 'Active', driver_id: 1, service_due: addDays(10), img_url: '' },
+        { id: 2, plate: '3-B67890 ET', model: 'Sino Howo 336 HP (dump)', capacity: '16 m³ / 25 tons', status: 'Active', driver_id: 2, service_due: addDays(40), img_url: '' },
+        { id: 3, plate: '3-C24680 ET', model: 'Sino Howo 371 HP (tipper)', capacity: '18 m³ / 30 tons', status: 'Standby', driver_id: null, service_due: addDays(-3), img_url: '' },
+      ],
+      trips: [
+        { id: 1, trip_date: t, plate: '3-A12345 ET', driver: 'Abebe Kebede', material: 'sand', origin: 'Mojo quarry', destination: 'Bole Bulbula', loads: 2, distance_km: 40, price: 18000, status: 'In Transit', paid: false, notes: '', quote_ref: null },
+        { id: 2, trip_date: addDays(-1), plate: '3-B67890 ET', driver: 'Tesfaye Alemu', material: 'stone', origin: 'Sebeta crusher', destination: 'CMC', loads: 3, distance_km: 25, price: 24500, status: 'Delivered', paid: true, notes: 'Gate pass at 7am', quote_ref: null },
+      ],
+      quotes: [{ id: 1, ref: 'ARI-DEMO-0001', name: 'Sample Customer', phone: '0933445566', service: MATERIALS[0].label, volume: VOLUMES[1], location: 'Gerji, Addis Ababa', details: 'Demo request', status: 'New', created_at: new Date().toISOString() }],
+      news: [{ id: 1, news_date: t, title: 'Welcome to our new online dispatch board', content: 'You can now see live truck availability and request quotes online.', published: true }],
+    };
+  },
+};
+const localDB = {
+  async list(table, [col, asc = true] = []) {
+    const rows = [...L.load()[table]];
+    if (col) rows.sort((a, b) => (String(a[col] ?? '') < String(b[col] ?? '') ? -1 : String(a[col] ?? '') > String(b[col] ?? '') ? 1 : 0) * (asc ? 1 : -1) || (b.id - a.id));
+    return rows;
+  },
+  async insert(table, row) {
+    const d = L.load();
+    if (table === 'fleet' && d.fleet.some((t) => t.plate.toLowerCase() === row.plate.toLowerCase())) throw new Error('That value already exists (duplicate).');
+    const rec = { ...row, id: ++d.seq };
+    if (table === 'quotes') rec.created_at = new Date().toISOString();
+    d[table].push(rec); L.save(); return rec;
+  },
+  async update(table, id, patch) {
+    const d = L.load(); const r = d[table].find((x) => String(x.id) === String(id));
+    if (!r) throw new Error('Record not found.');
+    if (table === 'fleet' && patch.plate && d.fleet.some((t) => t.id !== r.id && t.plate.toLowerCase() === patch.plate.toLowerCase())) throw new Error('That value already exists (duplicate).');
+    Object.assign(r, patch); L.save();
+  },
+  async remove(table, id) {
+    const d = L.load();
+    d[table] = d[table].filter((x) => String(x.id) !== String(id));
+    if (table === 'drivers') d.fleet.forEach((t) => { if (String(t.driver_id) === String(id)) t.driver_id = null; });
+    L.save();
+  },
+  async getSettings() { return { ...DEFAULT_SETTINGS, ...L.load().settings }; },
+  async saveSettings(s) { L.load().settings = { ...s }; L.save(); },
+  async publicData() {
+    const d = L.load();
+    return { settings: await localDB.getSettings(), fleet: d.fleet.filter((t) => t.status !== 'Maintenance'), news: d.news.filter((n) => n.published) };
+  },
+  async uploadPhoto(blob) { return blobToDataURL(await compressImage(new File([blob], 'p.jpg', { type: 'image/jpeg' }), 640, 0.7)); },
+  async removePhoto() {},
+  async insertQuote(q) { await localDB.insert('quotes', { ...q, status: 'New' }); },
+};
+
+/* ---- Supabase cloud ---- */
+const cloudDB = {
+  async list(table, [col, asc = true] = []) {
+    let q = client.from(table).select('*');
+    if (col) q = q.order(col, { ascending: asc });
+    return unwrap(await q) || [];
+  },
+  async insert(table, row) { return unwrap(await client.from(table).insert(row)); },
+  async update(table, id, patch) { unwrap(await client.from(table).update(patch).eq('id', id)); },
+  async remove(table, id) { unwrap(await client.from(table).delete().eq('id', id)); },
+  async getSettings() {
+    const row = unwrap(await client.from('settings').select('*').eq('id', 1).maybeSingle());
+    return { ...DEFAULT_SETTINGS, ...(row || {}), multipliers: { ...DEFAULT_SETTINGS.multipliers, ...((row && row.multipliers) || {}) } };
+  },
+  async saveSettings(s) { unwrap(await client.from('settings').upsert({ id: 1, ...s })); },
+  async publicData() {
+    const [settings, fleet, news] = await Promise.all([
+      cloudDB.getSettings(),
+      client.from('public_fleet').select('*').order('plate'),
+      client.from('news').select('*').eq('published', true).order('news_date', { ascending: false }).limit(6),
+    ]);
+    return { settings, fleet: unwrap(fleet) || [], news: unwrap(news) || [] };
+  },
+  async uploadPhoto(blob) {
+    const path = `trucks/${Date.now()}_${Math.random().toString(36).slice(2, 8)}.jpg`;
+    const { error } = await client.storage.from(CONFIG.storageBucket).upload(path, blob, { contentType: 'image/jpeg', cacheControl: '31536000' });
+    if (error) throw friendly(error);
+    return client.storage.from(CONFIG.storageBucket).getPublicUrl(path).data.publicUrl;
+  },
+  async removePhoto(url) {
+    const marker = `/storage/v1/object/public/${CONFIG.storageBucket}/`;
+    const i = String(url || '').indexOf(marker);
+    if (i < 0) return;
+    try { await client.storage.from(CONFIG.storageBucket).remove([decodeURIComponent(url.slice(i + marker.length))]); } catch (_) { /* best effort */ }
+  },
+  async insertQuote(q) { unwrap(await client.from('quotes').insert({ ...q, status: 'New' })); },
+};
+const DB = isCloud ? cloudDB : localDB;
+
+/* ---- Auth ---- */
+const auth = {
+  async current() {
+    if (!isCloud) return sessionStorage.getItem('ARITI_DEMO_AUTH') ? { email: 'demo manager' } : null;
+    const { data } = await client.auth.getSession();
+    const user = data && data.session && data.session.user;
+    if (!user) return null;
+    return (await auth.isAdmin()) ? user : null;
+  },
+  async isAdmin() {
+    const { data, error } = await client.rpc('is_admin');
+    return !error && data === true;
+  },
+  async login(email, password) {
+    if (!isCloud) {
+      if (password === DEMO_PASSWORD) { sessionStorage.setItem('ARITI_DEMO_AUTH', '1'); return { ok: true, user: { email: 'demo manager' } }; }
+      return { ok: false, message: 'Wrong password. In demo mode the password is "' + DEMO_PASSWORD + '".' };
+    }
+    const { data, error } = await client.auth.signInWithPassword({ email, password });
+    if (error) return { ok: false, message: /invalid login/i.test(error.message) ? 'Wrong email or password.' : error.message };
+    if (!(await auth.isAdmin())) { await client.auth.signOut(); return { ok: false, message: 'This account is not a manager. Ask the owner to add your email to the admins list.' }; }
+    return { ok: true, user: data.user };
+  },
+  async logout() { if (!isCloud) sessionStorage.removeItem('ARITI_DEMO_AUTH'); else await client.auth.signOut(); },
+};
+
+/* =====================================================================
+   4. STATE
+   ===================================================================== */
+const S = { settings: { ...DEFAULT_SETTINGS }, drivers: [], fleet: [], trips: [], quotes: [], news: [] };
+const view = { tripQ: '', tripStatus: '', quoteStatus: '', admin: false, realtime: null, publicLoaded: false };
+
+/* =====================================================================
+   5. PUBLIC WEBSITE
+   ===================================================================== */
+function tgUrl(text) { return `https://t.me/${tgHandle(S.settings.telegram)}` + (text ? `?text=${encodeURIComponent(text)}` : ''); }
+
+function renderContact() {
+  ['heroTelegram', 'floatTelegram', 'ftTelegram'].forEach((id) => { $(id).href = tgUrl(); });
+  $('ftPhone').textContent = S.settings.phone;
+  $('ftPhone').href = 'tel:' + String(S.settings.phone).replace(/[^\d+]/g, '');
+  $('ftCity').textContent = S.settings.city;
+}
+
+function renderPublicStatic() {
+  $('serviceList').innerHTML = MATERIALS.map((m) => `
+    <li><span class="ic"><i class="fa-solid ${m.icon}"></i></span>
+      <div><h3>${esc(m.label)}</h3><button type="button" class="link-btn" data-service="${esc(m.key)}">Request a quote</button></div></li>`).join('');
+  $('estMaterial').innerHTML = MATERIALS.map((m) => `<option value="${esc(m.key)}">${esc(m.label)}</option>`).join('');
+  $('quoteService').innerHTML = MATERIALS.map((m) => `<option value="${esc(m.label)}">${esc(m.label)}</option>`).join('');
+  $('quoteTonnage').innerHTML = VOLUMES.map((v) => `<option>${esc(v)}</option>`).join('');
+  $('ftYear').textContent = '© ' + new Date().getFullYear();
+}
+
+function renderPublicData() {
+  renderContact();
+  const visible = S.fleet.filter((t) => t.status !== 'Maintenance');
+  const ready = visible.filter((t) => t.status === 'Active');
+  $('statReady').textContent = ready.length;
+  $('statFleet').textContent = visible.length;
+  $('heroBoard').innerHTML = ready.slice(0, 5).map((t) => `
+    <li><span class="plate">${esc(t.plate)}</span><span class="cap">${esc(t.capacity)}</span></li>`).join('')
+    || '<li class="none">All trucks are on the road right now. Request a quote for a priority slot.</li>';
+
+  $('fleetContainer').innerHTML = visible.map((t) => {
+    const img = safeImg(t.img_url);
+    return `<article class="truck">
+      <div class="photo">${img ? `<img src="${esc(img)}" alt="${esc(t.model)}" loading="lazy">` : '<i class="fa-solid fa-truck-moving" aria-hidden="true"></i>'}</div>
+      <div class="body">
+        <div class="row"><span class="plate">${esc(t.plate)}</span><span class="${t.status === 'Active' ? 'tag-ready' : 'tag-standby'}">${t.status === 'Active' ? 'Ready today' : 'Standby'}</span></div>
+        <h3>${esc(t.model)}</h3><span class="sub">Capacity: ${esc(t.capacity)}</span>
+      </div></article>`;
+  }).join('') || '<p style="color:#94a3b8">Fleet list coming soon.</p>';
+
+  $('newsContainer').innerHTML = S.news.filter((n) => n.published).map((n) => `
+    <article><time datetime="${esc(n.news_date)}">${esc(fmtDate(n.news_date))}</time><h3>${esc(n.title)}</h3><p>${esc(n.content)}</p></article>`).join('')
+    || '<p style="color:#64748b">No bulletins at the moment.</p>';
+  runEstimate();
+}
+
+function runEstimate() {
+  const trips = Math.min(500, Math.max(1, parseInt($('estTrips').value, 10) || 1));
+  const km = Math.min(3000, Math.max(1, parseFloat($('estDistance').value) || 1));
+  const r = estimate(S.settings, $('estMaterial').value, trips, km);
+  $('estTotal').textContent = `${etb(r.low)} - ${etb(r.high)}`;
+  $('estDetail').textContent = `About ${etb(r.perTrip)} per trip · ${trips} trip${trips > 1 ? 's' : ''} · ${km} km`;
+}
+
+async function submitQuote(e) {
+  e.preventDefault();
+  const form = e.target;
+  if ($('quoteWebsite').value) { form.reset(); $('quoteDone').showModal(); return; }   // spam bot: pretend success
+  const name = $('quoteName').value.trim(), phone = $('quotePhone').value.trim(), loc = $('quoteLocation').value.trim();
+  if (!name || !loc) { toast('Please fill in your name and delivery location.', 'error'); return; }
+  $('phoneErr').classList.toggle('hidden', phoneOk(phone));
+  if (!phoneOk(phone)) { $('quotePhone').focus(); return; }
+  const q = { ref: makeRef(), name, phone, service: $('quoteService').value, volume: $('quoteTonnage').value, location: loc, details: $('quoteDetails').value.trim() };
+  const btn = form.querySelector('[type=submit]');
+  btn.disabled = true;
+  try {
+    for (let attempt = 0; ; attempt++) {
+      try { await DB.insertQuote(q); break; }
+      catch (err) { if (/duplicate/i.test(err.message) && attempt < 3) { q.ref = makeRef(); continue; } throw err; }
+    }
+    $('doneRef').textContent = q.ref;
+    $('quoteDone').showModal();
+    form.reset();
+  } catch (err) {
+    console.error(err);
+    toast('We could not save your request online. Opening Telegram so you can send it directly.', 'error');
+    const msg = `ARITI TRANSPORTATION - Quote request ${q.ref}\nName: ${q.name}\nPhone: ${q.phone}\nService: ${q.service}\nVolume: ${q.volume}\nLocation: ${q.location}\nNotes: ${q.details || 'None'}`;
+    window.open(tgUrl(msg), '_blank', 'noopener');
+  } finally { btn.disabled = false; }
+}
+
+function initPublic() {
+  renderPublicStatic();
+  $('navToggle').addEventListener('click', () => {
+    const open = $('mobileNav').classList.toggle('hidden') === false;
+    $('navToggle').setAttribute('aria-expanded', String(open));
+  });
+  $('mobileNav').addEventListener('click', (e) => { if (e.target.closest('a')) { $('mobileNav').classList.add('hidden'); $('navToggle').setAttribute('aria-expanded', 'false'); } });
+  ['estMaterial', 'estTrips', 'estDistance'].forEach((id) => $(id).addEventListener('input', runEstimate));
+  $('serviceList').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-service]'); if (!b) return;
+    const m = MATERIALS.find((x) => x.key === b.dataset.service);
+    if (m) $('quoteService').value = m.label;
+    $('quote').scrollIntoView({ behavior: 'smooth' });
+    $('quoteName').focus({ preventScroll: true });
+  });
+  $('quotePhone').addEventListener('input', () => $('phoneErr').classList.add('hidden'));
+  $('quoteForm').addEventListener('submit', submitQuote);
+  $('doneClose').addEventListener('click', () => $('quoteDone').close());
+}
+
+async function loadPublic() {
+  try { Object.assign(S, await DB.publicData()); view.publicLoaded = true; }
+  catch (err) { console.error(err); toast('Live data could not be loaded. Showing defaults.', 'error'); }
+  renderPublicData();
+}
+
+/* =====================================================================
+   6. MANAGER PORTAL
+   ===================================================================== */
+const TABS = ['overview', 'reports', 'trips', 'quotes', 'fleet', 'drivers', 'news', 'settings'];
+const TONE = { Active: 'p-green', Standby: 'p-grey', Maintenance: 'p-amber', Scheduled: 'p-grey', 'In Transit': 'p-sky', Delivered: 'p-green', Cancelled: 'p-red' };
+const pill = (text) => `<span class="pill ${TONE[text] || 'p-grey'}">${esc(text)}</span>`;
+const emptyRow = (cols, msg) => `<tr><td colspan="${cols}" class="empty">${esc(msg)}</td></tr>`;
+const iconBtn = (act, id, icon, label, extra = '') => `<button type="button" class="iconbtn ${extra}" data-act="${act}" data-id="${esc(id)}" title="${esc(label)}" aria-label="${esc(label)}"><i class="fa-solid ${icon}"></i></button>`;
+const formVals = (f) => Object.fromEntries(new FormData(f));
+const setBusy = (btn, on) => { if (btn) btn.disabled = on; };
+
+async function guard(fn, btn) {
+  setBusy(btn, true);
+  try { await fn(); } catch (err) { console.error(err); toast(err.message || 'Something went wrong.', 'error'); } finally { setBusy(btn, false); }
+}
+
+/* ---- load & render ---- */
+async function loadAdmin() {
+  const [settings, drivers, fleet, trips, quotes, news] = await Promise.all([
+    DB.getSettings(), DB.list('drivers', ['name', true]), DB.list('fleet', ['plate', true]),
+    DB.list('trips', ['trip_date', false]), DB.list('quotes', ['created_at', false]), DB.list('news', ['news_date', false]),
+  ]);
+  Object.assign(S, { settings, drivers, fleet, trips, quotes, news });
+  renderAll();
+}
+async function reload() { try { await loadAdmin(); } catch (err) { console.error(err); toast('Could not refresh from the database: ' + err.message, 'error'); } }
+
+function renderAll() {
+  fillSelects(); fillSettings();
+  const newQ = S.quotes.filter((q) => q.status === 'New').length;
+  const open = S.trips.filter((t) => t.status === 'Scheduled' || t.status === 'In Transit').length;
+  $('badgeQuotes').textContent = newQ || '';
+  $('badgeTrips').textContent = open || '';
+  renderOverview(); renderReports(); renderTrips(); renderQuotes(); renderFleet(); renderDrivers(); renderNews();
+}
+
+function fillSelects() {
+  const keep = (id, html) => { const el = $(id), v = el.value; el.innerHTML = html; if (v && Array.from(el.options).some((o) => o.value === v)) el.value = v; };
+  keep('t_plate', S.fleet.map((t) => `<option value="${esc(t.plate)}">${esc(t.plate)}</option>`).join('') || '<option value="">Add a truck first</option>');
+  keep('t_driver', S.drivers.map((x) => `<option value="${esc(x.name)}">${esc(x.name)}</option>`).join('') || '<option value="">Add a driver first</option>');
+  keep('t_material', MATERIALS.map((m) => `<option value="${esc(m.key)}">${esc(m.label)}</option>`).join(''));
+  keep('f_status', options(TRUCK_STATUSES));
+  keep('f_driver', '<option value="">Not assigned</option>' + S.drivers.map((x) => `<option value="${esc(x.id)}">${esc(x.name)}</option>`).join(''));
+  keep('tripStatusFilter', '<option value="">All statuses</option>' + options(TRIP_STATUSES));
+  keep('quoteStatusFilter', '<option value="">All statuses</option>' + options(QUOTE_STATUSES));
+  keep('repTruckFilter', '<option value="">All trucks</option>' + S.fleet.map((t) => `<option value="${esc(t.plate)}">${esc(t.plate)}</option>`).join(''));
+}
+
+/* ---- overview ---- */
+function renderOverview() {
+  const day = today(), month = day.slice(0, 7);
+  const live = S.trips.filter((t) => t.status !== 'Cancelled');
+  const sum = (a) => a.reduce((s, t) => s + (Number(t.price) || 0), 0);
+  const newQ = S.quotes.filter((q) => q.status === 'New').length;
+  const kpi = (label, value, icon, hot) => `<div class="kpi ${hot ? 'hot' : ''}"><i class="fa-solid ${icon}"></i><div class="v">${value}</div><div class="t">${label}</div></div>`;
+  $('kpis').innerHTML = [
+    kpi('Trucks ready today', `${S.fleet.filter((t) => t.status === 'Active').length} of ${S.fleet.length}`, 'fa-truck'),
+    kpi('Trips today', live.filter((t) => t.trip_date === day).length, 'fa-calendar-day'),
+    kpi('On the road', S.trips.filter((t) => t.status === 'In Transit').length, 'fa-road'),
+    kpi('New quote requests', newQ, 'fa-envelope', newQ > 0),
+    kpi('Revenue this month', etb(sum(live.filter((t) => String(t.trip_date).startsWith(month)))), 'fa-coins'),
+    kpi('Delivered, unpaid', etb(sum(live.filter((t) => t.status === 'Delivered' && !t.paid))), 'fa-hand-holding-dollar'),
+  ].join('');
+
+  const days = Array.from({ length: 7 }, (_, i) => addDays(i - 6));
+  const counts = days.map((d) => live.filter((t) => t.trip_date === d).length);
+  const max = Math.max(3, ...counts), bw = 44, gap = 14, H = 130;
+  $('chart').innerHTML = `<svg viewBox="0 0 ${days.length * (bw + gap)} ${H + 34}" style="width:100%;max-height:260px" role="img" aria-label="Trips per day for the last 7 days">` +
+    counts.map((c, i) => {
+      const h = Math.max(c ? 4 : 0, (c / max) * H), x = i * (bw + gap) + gap / 2;
+      const lbl = parseDay(days[i]).toLocaleDateString('en-GB', { weekday: 'short' });
+      return `<rect x="${x}" y="${H - h + 14}" width="${bw}" height="${h}" rx="3" fill="${days[i] === day ? '#F5A800' : '#1E2530'}"/>
+        <text x="${x + bw / 2}" y="${H - h + 9}" text-anchor="middle" font-size="12" font-weight="700" fill="#12161C">${c}</text>
+        <text x="${x + bw / 2}" y="${H + 30}" text-anchor="middle" font-size="11" fill="#64748b">${lbl}</text>`;
+    }).join('') + '</svg>';
+
+  const alerts = [];
+  S.fleet.forEach((t) => {
+    if (!t.service_due) return;
+    const n = daysUntil(t.service_due);
+    if (n < 0) alerts.push(['red', `${t.plate}: service was due ${-n} day${-n > 1 ? 's' : ''} ago`]);
+    else if (n <= 14) alerts.push(['amber', `${t.plate}: service due in ${n} day${n === 1 ? '' : 's'}`]);
+  });
+  const unpaid = live.filter((t) => t.status === 'Delivered' && !t.paid).length;
+  if (unpaid) alerts.push(['amber', `${unpaid} delivered trip${unpaid > 1 ? 's' : ''} not yet paid`]);
+  if (newQ) alerts.push(['amber', `${newQ} new quote request${newQ > 1 ? 's' : ''} waiting for a reply`]);
+  const noDriver = S.fleet.filter((t) => t.status === 'Active' && !t.driver_id).length;
+  if (noDriver) alerts.push(['amber', `${noDriver} active truck${noDriver > 1 ? 's have' : ' has'} no assigned driver`]);
+  $('alerts').innerHTML = alerts.map(([c, t]) => `<li><span class="d ${c === 'red' ? 'red' : ''}"></span><span>${esc(t)}</span></li>`).join('') || '<li style="color:#64748b">All up to date.</li>';
+}
+
+/* ---- reports ---- */
+function getReportData() {
+  const s = $('repStart').value, e = $('repEnd').value, truck = $('repTruckFilter').value;
+  return S.trips.filter((t) => (!s || t.trip_date >= s) && (!e || t.trip_date <= e) && (!truck || t.plate === truck));
+}
+function renderReports() {
+  const list = getReportData();
+  const live = list.filter((t) => t.status !== 'Cancelled');
+  const sum = (a, k) => a.reduce((s, t) => s + (Number(t[k]) || 0), 0);
+  const totalRev = sum(live, 'price'), paidRev = sum(live.filter((t) => t.paid), 'price');
+  const label = `${fmtDate($('repStart').value)} to ${fmtDate($('repEnd').value)}`;
+  $('repPeriodLabel').textContent = label;
+  $('repPrintLabel').textContent = label + ($('repTruckFilter').value ? ' · ' + $('repTruckFilter').value : '');
+  $('repMetrics').innerHTML = `
+    <div class="metric"><div class="t">Trips in range</div><div class="v">${list.length}</div></div>
+    <div class="metric b"><div class="t">Loads / distance</div><div class="v">${sum(live, 'loads')} <span class="sub">/ ${sum(live, 'distance_km')} km</span></div></div>
+    <div class="metric g"><div class="t">Total revenue</div><div class="v">${etb(totalRev)}</div></div>
+    <div class="metric g"><div class="t">Collected (paid)</div><div class="v">${etb(paidRev)}</div></div>
+    <div class="metric r"><div class="t">Pending collection</div><div class="v">${etb(totalRev - paidRev)}</div></div>`;
+  const by = {};
+  live.forEach((t) => { const b = (by[t.plate] ||= { trips: 0, loads: 0, km: 0, rev: 0 }); b.trips++; b.loads += +t.loads || 0; b.km += +t.distance_km || 0; b.rev += +t.price || 0; });
+  $('repTruckRows').innerHTML = Object.entries(by).sort((a, b) => b[1].rev - a[1].rev).map(([plate, s]) =>
+    `<tr><td><span class="plate">${esc(plate)}</span></td><td>${s.trips}</td><td>${s.loads}</td><td>${s.km} km</td><td class="r"><b>${etb(s.rev)}</b></td></tr>`).join('')
+    || emptyRow(5, 'No active trips in this date range.');
+  $('repTripsRows').innerHTML = list.map((t) => `<tr>
+    <td class="nowrap">${esc(fmtDate(t.trip_date))}</td>
+    <td><span class="plate">${esc(t.plate)}</span><div class="sub">${esc(t.driver)}</div></td>
+    <td>${esc(t.origin)} → ${esc(t.destination)}</td><td>${esc(materialLabel(t.material))}</td><td>${esc(t.loads)}</td>
+    <td class="r"><b>${etb(t.price)}</b></td><td>${pill(t.status)}</td>
+    <td>${t.status === 'Cancelled' ? '-' : t.paid ? '<span style="color:#047857;font-weight:600">Paid</span>' : '<span style="color:#b91c1c;font-weight:600">Unpaid</span>'}</td></tr>`).join('')
+    || emptyRow(8, 'No trips found in this range.');
+}
+function setRange(mode) {
+  const now = new Date(), y = now.getFullYear(), m = now.getMonth();
+  let s = today(), e = today();
+  if (mode === 'week') { const wd = now.getDay() || 7; const mon = new Date(now); mon.setDate(now.getDate() - wd + 1); s = iso(mon); }
+  else if (mode === 'month') s = iso(new Date(y, m, 1));
+  else if (mode === 'lastmonth') { s = iso(new Date(y, m - 1, 1)); e = iso(new Date(y, m, 0)); }
+  $('repStart').value = s; $('repEnd').value = e;
+  renderReports();
+}
+
+/* ---- trips ---- */
+function renderTrips() {
+  const q = view.tripQ.toLowerCase();
+  const list = S.trips.filter((t) => (!view.tripStatus || t.status === view.tripStatus) &&
+    (!q || [t.plate, t.driver, t.origin, t.destination, t.notes].some((v) => String(v || '').toLowerCase().includes(q))));
+  $('tripsBody').innerHTML = list.map((t) => `<tr>
+    <td class="nowrap">${esc(fmtDate(t.trip_date))}</td>
+    <td><span class="plate">${esc(t.plate)}</span><div class="sub">${esc(t.driver)}</div></td>
+    <td>${esc(t.origin)} → ${esc(t.destination)}${t.quote_ref ? `<div class="sub">Quote ${esc(t.quote_ref)}</div>` : ''}</td>
+    <td>${esc(materialLabel(t.material))}<div class="sub">${esc(t.loads)} load${+t.loads > 1 ? 's' : ''}</div></td>
+    <td class="r"><b>${etb(t.price)}</b></td>
+    <td><select class="field mini" data-change="trip-status" data-id="${esc(t.id)}" aria-label="Trip status">${options(TRIP_STATUSES, t.status)}</select></td>
+    <td>${t.status === 'Cancelled' ? '-' : `<button type="button" class="link-btn" style="color:${t.paid ? '#047857' : '#b91c1c'}" data-act="trip-paid" data-id="${esc(t.id)}">${t.paid ? 'Paid' : 'Unpaid'}</button>`}</td>
+    <td class="r nowrap">${iconBtn('trip-edit', t.id, 'fa-pen', 'Edit trip')}${iconBtn('trip-del', t.id, 'fa-trash', 'Delete trip', 'del')}</td></tr>`).join('')
+    || emptyRow(8, 'No trips found.');
+}
+function resetTripForm() {
+  const f = $('tripForm'); f.reset();
+  f.elements.id.value = ''; f.elements.quote_ref.value = '';
+  f.elements.trip_date.value = today();
+  $('tripFormTitle').textContent = 'Dispatch a trip';
+  $('tripSubmit').textContent = 'Save trip';
+  $('tripCancel').classList.add('hidden');
+}
+function ensureOption(sel, value, text) {
+  if (value && !Array.from(sel.options).some((o) => o.value === String(value))) sel.insertAdjacentHTML('beforeend', `<option value="${esc(value)}">${esc(text || value)}</option>`);
+  sel.value = value ?? '';
+}
+function editTrip(id) {
+  const t = S.trips.find((x) => String(x.id) === String(id)); if (!t) return;
+  const f = $('tripForm');
+  f.elements.id.value = t.id; f.elements.quote_ref.value = t.quote_ref || '';
+  f.elements.trip_date.value = t.trip_date;
+  ensureOption(f.elements.plate, t.plate); ensureOption(f.elements.driver, t.driver);
+  f.elements.material.value = t.material;
+  ['origin', 'destination', 'loads', 'distance_km', 'price', 'notes'].forEach((k) => { f.elements[k].value = t[k] ?? ''; });
+  $('tripFormTitle').textContent = 'Edit trip #' + t.id;
+  $('tripSubmit').textContent = 'Update trip';
+  $('tripCancel').classList.remove('hidden');
+  f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+async function saveTrip(e) {
+  e.preventDefault();
+  const f = e.target, v = formVals(f);
+  if (!v.plate || !v.driver) { toast('Add a truck and a driver first (Fleet and Drivers tabs).', 'error'); return; }
+  if (!v.trip_date || !v.origin.trim() || !v.destination.trim()) { toast('Date, origin and destination are required.', 'error'); return; }
+  const row = {
+    trip_date: v.trip_date, plate: v.plate, driver: v.driver, material: v.material,
+    origin: v.origin.trim(), destination: v.destination.trim(),
+    loads: Math.max(1, parseInt(v.loads, 10) || 1), distance_km: Math.max(0, +v.distance_km || 0), price: Math.max(0, +v.price || 0),
+    notes: v.notes.trim(), quote_ref: v.quote_ref || null,
+  };
+  await guard(async () => {
+    if (v.id) await DB.update('trips', v.id, row);
+    else {
+      await DB.insert('trips', { ...row, status: 'Scheduled', paid: false });
+      const q = row.quote_ref && S.quotes.find((x) => x.ref === row.quote_ref);
+      if (q && ['New', 'Contacted', 'Quoted'].includes(q.status)) await DB.update('quotes', q.id, { status: 'Confirmed' });
+    }
+    toast(v.id ? 'Trip updated.' : 'Trip saved.', 'success');
+    resetTripForm();
+    await reload();
+  }, $('tripSubmit'));
+}
+
+/* ---- quotes ---- */
+function renderQuotes() {
+  const list = S.quotes.filter((q) => !view.quoteStatus || q.status === view.quoteStatus);
+  $('quotesBody').innerHTML = list.map((q) => `<tr>
+    <td><span class="plate">${esc(q.ref)}</span><div class="sub">${esc(fmtDate(q.created_at ? iso(new Date(q.created_at)) : ''))}</div></td>
+    <td><b>${esc(q.name)}</b><div><a href="tel:${esc(String(q.phone).replace(/[^\d+]/g, ''))}" style="color:#0369a1">${esc(q.phone)}</a></div></td>
+    <td>${esc(q.service)}<div class="sub">${esc(q.volume)}${q.details ? ' · ' + esc(q.details) : ''}</div></td>
+    <td>${esc(q.location)}</td>
+    <td><select class="field mini" data-change="quote-status" data-id="${esc(q.id)}" aria-label="Quote status">${options(QUOTE_STATUSES, q.status)}</select></td>
+    <td class="r nowrap">${iconBtn('quote-trip', q.id, 'fa-route', 'Create a trip from this quote')}${iconBtn('quote-del', q.id, 'fa-trash', 'Delete quote', 'del')}</td></tr>`).join('')
+    || emptyRow(6, 'No quote requests.');
+}
+function quoteToTrip(id) {
+  const q = S.quotes.find((x) => String(x.id) === String(id)); if (!q) return;
+  switchTab('trips');
+  resetTripForm();
+  const f = $('tripForm');
+  f.elements.quote_ref.value = q.ref;
+  f.elements.destination.value = q.location.slice(0, 80);
+  const key = materialByLabel(q.service); if (key) f.elements.material.value = key;
+  f.elements.notes.value = `${q.name} ${q.phone} - ${q.volume}`.slice(0, 200);
+  $('tripFormTitle').textContent = 'New trip from quote ' + q.ref;
+  $('tripCancel').classList.remove('hidden');
+  f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  toast('Quote details copied. Choose truck, driver and price.', 'info');
+}
+
+/* ---- fleet ---- */
+function renderFleet() {
+  $('fleetBody').innerHTML = S.fleet.map((t) => {
+    const drv = S.drivers.find((x) => String(x.id) === String(t.driver_id)), img = safeImg(t.img_url);
+    const due = t.service_due ? daysUntil(t.service_due) : null;
+    return `<tr>
+      <td>${img ? `<img class="thumb" src="${esc(img)}" alt="" loading="lazy">` : '<span class="thumb"><i class="fa-solid fa-truck"></i></span>'}</td>
+      <td><span class="plate">${esc(t.plate)}</span></td>
+      <td>${esc(t.model)}<div class="sub">${esc(t.capacity)}</div></td>
+      <td>${drv ? esc(drv.name) : '<span class="sub">Unassigned</span>'}</td>
+      <td class="nowrap">${esc(fmtDate(t.service_due))}${due !== null && due < 0 ? ' <span class="pill p-red">Overdue</span>' : due !== null && due <= 14 ? ' <span class="pill p-amber">Soon</span>' : ''}</td>
+      <td>${pill(t.status)}</td>
+      <td class="r nowrap">${iconBtn('fleet-edit', t.id, 'fa-pen', 'Edit truck')}${iconBtn('fleet-del', t.id, 'fa-trash', 'Delete truck', 'del')}</td></tr>`;
+  }).join('') || emptyRow(7, 'No trucks registered yet.');
+}
+function resetFleetForm() {
+  const f = $('fleetForm'); f.reset(); f.elements.id.value = ''; delete f.dataset.curImg;
+  $('fleetFormTitle').textContent = 'Register a truck'; $('fleetSubmit').textContent = 'Save truck';
+  $('fleetCancel').classList.add('hidden');
+  $('fleetImgHelp').textContent = 'JPG, PNG or WebP. Photos are resized automatically to save storage.';
+}
+function editTruck(id) {
+  const t = S.fleet.find((x) => String(x.id) === String(id)); if (!t) return;
+  const f = $('fleetForm');
+  f.elements.id.value = t.id; f.elements.plate.value = t.plate; f.elements.model.value = t.model; f.elements.capacity.value = t.capacity;
+  f.elements.status.value = t.status; f.elements.driver_id.value = t.driver_id ?? ''; f.elements.service_due.value = t.service_due || '';
+  f.dataset.curImg = t.img_url || '';
+  $('fleetFormTitle').textContent = 'Edit truck ' + t.plate; $('fleetSubmit').textContent = 'Update truck';
+  $('fleetCancel').classList.remove('hidden');
+  $('fleetImgHelp').textContent = t.img_url ? 'The current photo is kept unless you choose a new one.' : 'No photo yet.';
+  f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+async function saveTruck(e) {
+  e.preventDefault();
+  const f = e.target, v = formVals(f), file = f.elements.image.files[0];
+  if (!v.plate.trim() || !v.model.trim() || !v.capacity.trim()) { toast('Plate, model and capacity are required.', 'error'); return; }
+  await guard(async () => {
+    const oldImg = f.dataset.curImg || '';
+    let img = oldImg;
+    if (file) {
+      toast('Resizing and uploading photo...', 'info');
+      img = await DB.uploadPhoto(await compressImage(file, 1280, 0.82));
+    }
+    const row = { plate: v.plate.trim().toUpperCase(), model: v.model.trim(), capacity: v.capacity.trim(), status: v.status,
+      driver_id: v.driver_id ? Number(v.driver_id) : null, service_due: v.service_due || null, img_url: img };
+    try { if (v.id) await DB.update('fleet', v.id, row); else await DB.insert('fleet', row); }
+    catch (err) { if (file) await DB.removePhoto(img); throw err; }   // do not leave an orphan upload
+    if (file && oldImg) await DB.removePhoto(oldImg);
+    toast(v.id ? 'Truck updated.' : 'Truck registered.', 'success');
+    resetFleetForm(); await reload();
+  }, $('fleetSubmit'));
+}
+
+/* ---- drivers ---- */
+function renderDrivers() {
+  $('driversBody').innerHTML = S.drivers.map((x) => `<tr>
+    <td><b>${esc(x.name)}</b></td><td><a href="tel:${esc(String(x.phone).replace(/[^\d+]/g, ''))}" style="color:#0369a1">${esc(x.phone)}</a></td><td>${esc(x.license || '-')}</td>
+    <td class="r nowrap">${iconBtn('driver-edit', x.id, 'fa-pen', 'Edit driver')}${iconBtn('driver-del', x.id, 'fa-trash', 'Delete driver', 'del')}</td></tr>`).join('')
+    || emptyRow(4, 'No drivers yet.');
+}
+function resetDriverForm() {
+  const f = $('driverForm'); f.reset(); f.elements.id.value = '';
+  $('driverFormTitle').textContent = 'Add a driver'; $('driverSubmit').textContent = 'Save driver'; $('driverCancel').classList.add('hidden');
+}
+async function saveDriver(e) {
+  e.preventDefault();
+  const v = formVals(e.target);
+  if (!v.name.trim() || !v.phone.trim()) { toast('Name and phone are required.', 'error'); return; }
+  await guard(async () => {
+    const row = { name: v.name.trim(), phone: v.phone.trim(), license: (v.license || '').trim() };
+    if (v.id) await DB.update('drivers', v.id, row); else await DB.insert('drivers', row);
+    toast(v.id ? 'Driver updated.' : 'Driver saved.', 'success');
+    resetDriverForm(); await reload();
+  }, $('driverSubmit'));
+}
+
+/* ---- news ---- */
+function renderNews() {
+  $('newsList').innerHTML = S.news.map((n) => `<div class="news-item">
+    <div><div class="sub">${esc(fmtDate(n.news_date))} ${n.published ? '<span class="pill p-green">Published</span>' : '<span class="pill p-grey">Hidden</span>'}</div>
+    <h3 class="display" style="font-size:1.3rem;margin-top:2px">${esc(n.title)}</h3><p style="margin:4px 0 0;color:#475569;font-size:.92rem">${esc(n.content)}</p></div>
+    <div class="nowrap">${iconBtn('news-toggle', n.id, n.published ? 'fa-eye-slash' : 'fa-eye', n.published ? 'Hide from website' : 'Publish on website')}${iconBtn('news-del', n.id, 'fa-trash', 'Delete bulletin', 'del')}</div></div>`).join('')
+    || '<p class="empty">No bulletins yet.</p>';
+}
+
+/* ---- settings ---- */
+function fillSettings() {
+  const s = S.settings, f = $('settingsForm');
+  f.elements.phone.value = s.phone; f.elements.telegram.value = s.telegram; f.elements.city.value = s.city;
+  f.elements.base_trip.value = s.base_trip; f.elements.per_km.value = s.per_km;
+  $('multGrid').innerHTML = MATERIALS.map((m) => `<label style="font-size:.88rem"><span class="lbl">${esc(m.label)}</span><input name="m_${esc(m.key)}" type="number" step="0.05" min="0.1" max="10" value="${esc((s.multipliers || {})[m.key] ?? 1)}" class="field"></label>`).join('');
+  $('pwForm').classList.toggle('hidden', !isCloud);
+}
+async function saveSettings(e) {
+  e.preventDefault();
+  const f = e.target, mult = {};
+  MATERIALS.forEach((m) => { mult[m.key] = Math.min(10, Math.max(0.1, Number(f.elements['m_' + m.key].value) || 1)); });
+  const s = { phone: f.elements.phone.value.trim(), telegram: tgHandle(f.elements.telegram.value), city: f.elements.city.value.trim(),
+    base_trip: Math.max(0, Number(f.elements.base_trip.value) || 0), per_km: Math.max(0, Number(f.elements.per_km.value) || 0), multipliers: mult };
+  await guard(async () => { await DB.saveSettings(s); toast('Settings saved.', 'success'); await reload(); }, f.querySelector('[type=submit]'));
+}
+
+/* ---- actions (event delegation) ---- */
+async function onAction(act, id) {
+  if (act === 'trip-edit') return editTrip(id);
+  if (act === 'fleet-edit') return editTruck(id);
+  if (act === 'driver-edit') {
+    const x = S.drivers.find((d) => String(d.id) === String(id)); if (!x) return;
+    const f = $('driverForm'); f.elements.id.value = x.id; f.elements.name.value = x.name; f.elements.phone.value = x.phone; f.elements.license.value = x.license || '';
+    $('driverFormTitle').textContent = 'Edit driver'; $('driverSubmit').textContent = 'Update driver'; $('driverCancel').classList.remove('hidden');
+    return f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  if (act === 'quote-trip') return quoteToTrip(id);
+  const run = async (fn, okMsg) => guard(async () => { await fn(); if (okMsg) toast(okMsg, 'success'); await reload(); });
+  if (act === 'trip-del' && await confirmBox('Delete this trip permanently?')) await run(() => DB.remove('trips', id), 'Trip deleted.');
+  else if (act === 'trip-paid') { const t = S.trips.find((x) => String(x.id) === String(id)); if (t) await run(() => DB.update('trips', id, { paid: !t.paid })); }
+  else if (act === 'quote-del' && await confirmBox('Delete this quote request?')) await run(() => DB.remove('quotes', id), 'Quote deleted.');
+  else if (act === 'fleet-del') {
+    const t = S.fleet.find((x) => String(x.id) === String(id));
+    if (t && await confirmBox(`Remove truck ${t.plate}? Past trips keep their history.`)) await run(async () => { await DB.remove('fleet', id); await DB.removePhoto(t.img_url); }, 'Truck removed.');
+  }
+  else if (act === 'driver-del') {
+    const x = S.drivers.find((d) => String(d.id) === String(id));
+    if (x && await confirmBox(`Delete driver ${x.name}? Their trucks become unassigned.`)) await run(() => DB.remove('drivers', id), 'Driver deleted.');
+  }
+  else if (act === 'news-toggle') { const n = S.news.find((x) => String(x.id) === String(id)); if (n) await run(() => DB.update('news', id, { published: !n.published })); }
+  else if (act === 'news-del' && await confirmBox('Delete this bulletin?')) await run(() => DB.remove('news', id), 'Bulletin deleted.');
+}
+
+/* ---- tabs & routing ---- */
+function switchTab(name) {
+  if (!TABS.includes(name)) name = 'overview';
+  $$('.tab-pane').forEach((p) => p.classList.toggle('hidden', p.id !== 'tab-' + name));
+  $$('.tab-btn').forEach((b) => { const on = b.dataset.tab === name; b.classList.toggle('active', on); b.setAttribute('aria-selected', String(on)); });
+  if (location.hash !== '#/admin/' + name) history.replaceState(null, '', '#/admin/' + name);
+  window.scrollTo({ top: 0 });
+  if (name === 'reports') renderReports();
+}
+
+function startRealtime() {
+  if (!isCloud || view.realtime) return;
+  view.realtime = client.channel('quotes-feed')
+    .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'quotes' }, async () => {
+      toast('New quote request received!', 'info');
+      try { S.quotes = await DB.list('quotes', ['created_at', false]); renderQuotes(); renderOverview(); $('badgeQuotes').textContent = S.quotes.filter((q) => q.status === 'New').length || ''; } catch (_) { /* ignore */ }
+    }).subscribe();
+}
+function stopRealtime() { if (view.realtime) { client.removeChannel(view.realtime); view.realtime = null; } }
+
+async function enterAdmin(user, tab) {
+  $('loginScreen').classList.add('hidden');
+  $('adminPanel').classList.remove('hidden');
+  $('userBadge').textContent = user && user.email ? user.email : '';
+  $('userBadge').classList.toggle('hidden', !(user && user.email));
+  try { await loadAdmin(); } catch (err) { console.error(err); toast('Could not load data: ' + err.message, 'error'); }
+  resetTripForm();
+  switchTab(tab);
+  startRealtime();
+}
+
+async function route() {
+  const h = location.hash;
+  if (h.startsWith('#/admin')) {
+    view.admin = true;
+    $('publicView').classList.add('hidden'); $('adminView').classList.remove('hidden');
+    document.title = 'Dispatch Control | ARITI TRANSPORTATION PLC';
+    const tab = h.split('/')[2] || 'overview';
+    if (!$('adminPanel').classList.contains('hidden')) return switchTab(tab);
+    const user = await auth.current().catch(() => null);
+    if (user) await enterAdmin(user, tab);
+    else { $('loginScreen').classList.remove('hidden'); $('managerEmail').focus(); }
+  } else {
+    const wasAdmin = view.admin; view.admin = false;
+    $('adminView').classList.add('hidden'); $('publicView').classList.remove('hidden');
+    document.title = 'ARITI TRANSPORTATION PLC | Sand, Clay, Stone & Truck Rental in Addis Ababa';
+    if (wasAdmin || !view.publicLoaded) await loadPublic();
+    const target = h.length > 1 ? document.getElementById(h.slice(1)) : null;
+    if (target) target.scrollIntoView(); else if (wasAdmin) window.scrollTo({ top: 0 });
+  }
+}
+
+function initAdmin() {
+  $('modeBadge').textContent = isCloud ? 'Online' : 'Demo';
+  $('modeBadge').classList.toggle('demo', !isCloud);
+  $('loginHint').textContent = isCloud ? 'Sign in with your manager account.' : `Demo mode: any email, password "${DEMO_PASSWORD}".`;
+  $('repStart').value = iso(new Date(new Date().getFullYear(), new Date().getMonth(), 1)); $('repEnd').value = today();
+
+  $('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const err = $('loginError'), btn = $('loginBtn');
+    err.classList.add('hidden'); btn.disabled = true;
+    try {
+      const res = await auth.login($('managerEmail').value.trim(), $('managerPass').value);
+      if (res.ok) { $('managerPass').value = ''; await enterAdmin(res.user, (location.hash.split('/')[2]) || 'overview'); }
+      else { err.textContent = res.message || 'Sign in failed.'; err.classList.remove('hidden'); }
+    } catch (ex) { err.textContent = friendly(ex).message; err.classList.remove('hidden'); }
+    btn.disabled = false;
+  });
+  $('logoutBtn').addEventListener('click', async () => {
+    stopRealtime(); await auth.logout();
+    Object.assign(S, { drivers: [], fleet: [], trips: [], quotes: [], news: [] });
+    $('adminPanel').classList.add('hidden'); $('loginScreen').classList.remove('hidden');
+    history.replaceState(null, '', '#/admin');
+  });
+  if (isCloud) client.auth.onAuthStateChange((event) => {
+    if (event === 'SIGNED_OUT' && view.admin && !$('adminPanel').classList.contains('hidden')) { stopRealtime(); $('adminPanel').classList.add('hidden'); $('loginScreen').classList.remove('hidden'); }
+  });
+
+  $$('.tab-btn').forEach((b) => b.addEventListener('click', () => switchTab(b.dataset.tab)));
+  document.addEventListener('click', (e) => { const b = e.target.closest('[data-act]'); if (b && view.admin) onAction(b.dataset.act, b.dataset.id); });
+  document.addEventListener('change', (e) => {
+    const s = e.target.closest('[data-change]'); if (!s || !view.admin) return;
+    const table = s.dataset.change === 'trip-status' ? 'trips' : 'quotes';
+    guard(async () => { await DB.update(table, s.dataset.id, { status: s.value }); await reload(); });
+  });
+
+  ['repStart', 'repEnd', 'repTruckFilter'].forEach((id) => $(id).addEventListener('change', renderReports));
+  $$('.rep-quick').forEach((b) => b.addEventListener('click', () => setRange(b.dataset.range)));
+  $('repPrintBtn').addEventListener('click', () => window.print());
+  $('repCsvBtn').addEventListener('click', () => {
+    const cols = [{ label: 'Date', key: 'trip_date' }, { label: 'Plate', key: 'plate' }, { label: 'Driver', key: 'driver' }, { label: 'Material', get: (t) => materialLabel(t.material) },
+      { label: 'Loads', key: 'loads' }, { label: 'Origin', key: 'origin' }, { label: 'Destination', key: 'destination' }, { label: 'Distance km', key: 'distance_km' },
+      { label: 'Price ETB', key: 'price' }, { label: 'Status', key: 'status' }, { label: 'Paid', get: (t) => (t.paid ? 'Yes' : 'No') }];
+    download(`ariti_report_${$('repStart').value}_to_${$('repEnd').value}.csv`, toCSV(getReportData(), cols));
+  });
+
+  $('tripForm').addEventListener('submit', saveTrip);
+  $('tripCancel').addEventListener('click', resetTripForm);
+  $('suggestPrice').addEventListener('click', () => {
+    const f = $('tripForm');
+    f.elements.price.value = Math.round(estimate(S.settings, f.elements.material.value, Math.max(1, +f.elements.loads.value || 1), Math.max(0, +f.elements.distance_km.value || 0)).total);
+  });
+  $('tripSearch').addEventListener('input', (e) => { view.tripQ = e.target.value.trim(); renderTrips(); });
+  $('tripStatusFilter').addEventListener('change', (e) => { view.tripStatus = e.target.value; renderTrips(); });
+  $('quoteStatusFilter').addEventListener('change', (e) => { view.quoteStatus = e.target.value; renderQuotes(); });
+  $('tripsCsv').addEventListener('click', () => download('ariti_trips.csv', toCSV(S.trips, [
+    { label: 'Date', key: 'trip_date' }, { label: 'Plate', key: 'plate' }, { label: 'Driver', key: 'driver' }, { label: 'Material', get: (t) => materialLabel(t.material) },
+    { label: 'Origin', key: 'origin' }, { label: 'Destination', key: 'destination' }, { label: 'Loads', key: 'loads' }, { label: 'Distance km', key: 'distance_km' },
+    { label: 'Price ETB', key: 'price' }, { label: 'Status', key: 'status' }, { label: 'Paid', get: (t) => (t.paid ? 'Yes' : 'No') }, { label: 'Quote ref', key: 'quote_ref' }, { label: 'Notes', key: 'notes' }])));
+  $('quotesCsv').addEventListener('click', () => download('ariti_quotes.csv', toCSV(S.quotes, [
+    { label: 'Reference', key: 'ref' }, { label: 'Received', key: 'created_at' }, { label: 'Name', key: 'name' }, { label: 'Phone', key: 'phone' }, { label: 'Service', key: 'service' },
+    { label: 'Volume', key: 'volume' }, { label: 'Location', key: 'location' }, { label: 'Details', key: 'details' }, { label: 'Status', key: 'status' }])));
+
+  $('fleetForm').addEventListener('submit', saveTruck);
+  $('fleetCancel').addEventListener('click', resetFleetForm);
+  $('driverForm').addEventListener('submit', saveDriver);
+  $('driverCancel').addEventListener('click', resetDriverForm);
+  $('newsForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const f = e.target, v = formVals(f);
+    if (!v.title.trim() || !v.content.trim()) { toast('Headline and announcement are required.', 'error'); return; }
+    await guard(async () => {
+      await DB.insert('news', { news_date: today(), title: v.title.trim(), content: v.content.trim(), published: f.elements.published.checked });
+      toast('Bulletin saved.', 'success'); f.reset(); await reload();
+    }, f.querySelector('[type=submit]'));
+  });
+  $('settingsForm').addEventListener('submit', saveSettings);
+  $('backupBtn').addEventListener('click', () => download(`ariti_backup_${today()}.json`, JSON.stringify({ exported: new Date().toISOString(), ...S }, null, 2), 'application/json'));
+  $('pwForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const pw = $('newPass').value;
+    if (pw.length < 10) { toast('Use at least 10 characters.', 'error'); return; }
+    await guard(async () => {
+      const { error } = await client.auth.updateUser({ password: pw });
+      if (error) throw friendly(error);
+      $('newPass').value = ''; toast('Password changed.', 'success');
+    }, e.target.querySelector('button'));
+  });
+}
+
+/* =====================================================================
+   7. START
+   ===================================================================== */
+initPublic();
+initAdmin();
+if (!isCloud) $('demoBar').classList.remove('hidden');
+window.addEventListener('hashchange', route);
+route();
+})();
+</script>
+</body>
+</html>
